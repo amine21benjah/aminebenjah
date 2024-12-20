@@ -1,0 +1,139 @@
+/* Variables for calming colors */
+:root {
+    --primary-color: #4A90E2;    /* Soothing blue */
+    --secondary-color: #F5F7FA;  /* Very light gray */
+    --text-color: #2C3E50;      /* Dark blue for text */
+    --accent-color: #E8F0FE;    /* Light blue for hover effects */
+    --hover-color: #357ABD;     /* Deeper blue for interactive hover */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Reset margins and paddings for a consistent layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the header */
+header {
+    background-color: var(--secondary-color);
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    border-bottom: 3px solid var(--primary-color);
+     /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Main title styling */
+.main-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 2rem;
+    box-shadow: 0 3px 5px var(--shadow-color);
+}
+
+/* Left navbar section */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.nav-brand:hover {
+    color: var(--hover-color);
+}
+
+/* Right navbar section */
+.nav-right {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #d0e7ff;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.nav-link:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Ajouter un padding-top au premier élément après le header */
+.exam-categories {
+    padding-top: 100px;
+}
